@@ -26,5 +26,5 @@ WARNING_THIS_IS_TEMPLATED: '#===================================================
   #===================================================================================
 
   '
-_commit: 0.0.3
+_commit: 0.0.4
 _src_path: git@github.com:bugra-yilmaz/copier-template-example.git

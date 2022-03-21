@@ -52,9 +52,9 @@ Boolean runE2EAutomatically = env.CHANGE_TARGET in ['master', 'staging']
 String VERSION_TAG = null
 
 try {
-    node(incubation-lite) {
+    node('incubation-lite') {
         stage('Checkout') {
-            dir (copier-project-example) {
+            dir ('copier-project-example') {
                 deleteDir()
                 checkout scm
                 VERSION_TAG = commonLib.readLocalVersionTag()
