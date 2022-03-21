@@ -1,6 +1,4 @@
 # Requirements for production
 boto3==1.17.49
 pyarrow==4.0.1
-{%- if USE_PYSPARK %}
 pyspark==3.0.1
-{%- endif %}

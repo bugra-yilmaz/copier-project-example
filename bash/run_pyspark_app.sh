@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-{{ WARNING_THIS_IS_TEMPLATED }}
+: '
+{{ WARNING_THIS_IS_TEMPLATED }}'
 
 # ...
