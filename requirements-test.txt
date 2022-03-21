@@ -1,0 +1,2 @@
+# Requirements for testing only
+coverage[toml]~=5.5

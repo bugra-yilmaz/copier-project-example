@@ -1,0 +1,31 @@
+#===================================================================================
+# THIS IS A TEMPLATED FILE; NEVER EDIT MANUALLY
+#
+# These configurations should not be modified here, they are handled by the Copier
+# tool and the DICE template. If you need to change any implementation in this file,
+# please consider if they are generic enough to be included in the template, or
+# use a project specific file for your needs. Instructions can be found in:
+# https://tools.adidas-group.com/bitbucket/projects/CG/repos/daa_eds_python_template
+#===================================================================================
+
+exclude: src/vendor
+repos:
+  - repo: https://github.com/asottile/reorder_python_imports
+    rev: v2.6.0
+    hooks:
+      - id: reorder-python-imports
+        args: [--py37-plus, --application-directories, '.:src/main/python:src/tests/python:dashboard/python']
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: pretty-format-json
+        args: [--autofix, --no-sort-keys]
+      - id: check-added-large-files
+      - id: check-executables-have-shebangs
+      - id: check-merge-conflict
+      - id: no-commit-to-branch
+        args: [--branch, master, --branch, staging, --branch, develop]
